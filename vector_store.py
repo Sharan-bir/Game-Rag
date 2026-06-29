@@ -12,7 +12,7 @@ from typing import Any
 
 class VectorStore:
     def __init__(self, path: str, collection_name: str) -> None:
-        import chromadb  # lazy import
+        import chromadb  
         self.client = chromadb.PersistentClient(path=path)
         # we supply our own embeddings, so no embedding_function is needed
         self.collection = self.client.get_or_create_collection(

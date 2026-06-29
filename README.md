@@ -84,8 +84,8 @@ so you can learn the concepts without a bill. Each is swappable (see the roadmap
 cp .env.example .env        # then paste your keys into .env
 
 # 2. Install
-python -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
+python -m venv venv && source venv/scripts/activate
+uv pip install -r requirements.txt
 
 # 3. Build the knowledge base (downloads the embedding model on first run)
 python ingest.py --total 300        # ~300 popular games; bump to 2000 for breadth

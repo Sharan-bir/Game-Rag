@@ -1,3 +1,4 @@
 .env
-.env.example
+
 test_rag.py
+venv
