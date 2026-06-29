@@ -4,3 +4,6 @@ test_rag.py
 venv
 .pytest_cache
 __pycache__
+
+frontend/dist
+frontend/node_modules

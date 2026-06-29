@@ -13,7 +13,7 @@ pipeline, with comments explaining *why* it exists. Read the files in this order
 
 ---
 
-## RAG in 90 seconds (read this first)
+## RAG (read this first)
 
 An LLM on its own only knows what it saw during training. It doesn't know your
 data, and it will confidently make up answers ("hallucinate"). **RAG fixes this
@@ -88,10 +88,16 @@ python -m venv venv && source venv/scripts/activate
 uv pip install -r requirements.txt
 
 # 3. Build the knowledge base (downloads the embedding model on first run)
-python ingest.py --total 300        # ~300 popular games; bump to 2000 for breadth
+python ingest.py --total 1000        # ~1000 popular games; bump to 2000 for breadth
 
 # 4. Run the API
 uvicorn main:app --reload
+
+# 5. for Frontend -- optional but recommended
+cd frontend 
+npm install
+npm run dev
+
 ```
 
 Open **http://localhost:8000/docs** — FastAPI's interactive Swagger UI. Try `/chat`
