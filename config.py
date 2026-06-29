@@ -36,5 +36,10 @@ class Settings:
     openai_api_key: str = os.getenv("OPENAI_API_KEY", "")
     openai_model: str = os.getenv("OPENAI_MODEL", "gpt-4.1-mini")
 
+    # --- auth (JWT) ---
+    jwt_secret: str = os.getenv("JWT_SECRET", "change-me-in-production")
+    jwt_algorithm: str = "HS256"
+    jwt_expire_minutes: int = 60
+
 
 settings = Settings()

@@ -80,5 +80,10 @@ def game_to_document(game: dict) -> tuple[str, dict]:
         "released": released,
         "genres": genres,
         "metacritic": str(metacritic),
+        "background_image": game.get("background_image") or "",
+        "platforms": platforms,
+        "developers": developers,
+        "rating": str(rating),
+        "tags": tags,
     }
     return text, metadata

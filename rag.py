@@ -37,6 +37,13 @@ class RagPipeline:
             {
                 "name": h["metadata"].get("name"),
                 "released": h["metadata"].get("released"),
+                "genres": h["metadata"].get("genres"),
+                "metacritic": h["metadata"].get("metacritic"),
+                "background_image": h["metadata"].get("background_image"),
+                "platforms": h["metadata"].get("platforms"),
+                "developers": h["metadata"].get("developers"),
+                "rating": h["metadata"].get("rating"),
+                "tags": h["metadata"].get("tags"),
                 "score": round(1 - h["distance"], 3),  # cosine distance -> similarity
             }
             for h in hits
